@@ -1,0 +1,26 @@
+{
+  "name": "h2wdcard",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "dependencies": {
+    "express": "^4.14.0"
+  },
+  "devDependencies": {
+    "nodemon": "^1.11.0"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon --debug server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ramumkii/h2wdcard.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ramumkii/h2wdcard/issues"
+  },
+  "homepage": "https://github.com/ramumkii/h2wdcard#readme"
+}
