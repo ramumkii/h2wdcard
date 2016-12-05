@@ -7,6 +7,7 @@ var app = express();
 
 // Routers
 var index = require('./routers/index');
+var user = require('./routers/user');
 var apis = require('./apis/index');
 
 app.set('port', process.env.PORT || 3000);
@@ -19,6 +20,7 @@ app.use(methodOverride());
 app.use(morgan('dev'));
 
 app.use('/', index);
+app.use('/user', user);
 app.use('/apis', apis);
 
 // Server
