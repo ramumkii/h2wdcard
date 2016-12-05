@@ -19,15 +19,18 @@ connection.connect(function(err) {
         throw err;
     }
 });
-
-module.exports = (function() {
-  router.get('/user', function(req, res) {
-      var query = connection.query('select * from users', function(err, rows) {
+module.exports.list = function(req, res) {
+  connection.query('select * from users', function(err, rows) {
        console.log(rows);
        res.json(rows);
       });
-        console.log(query);
-    });
-
-    return router;
-})();
+};
+module.exports.addUser = function(req, res) {
+  var user = {'id':req.body.id,
+               'password':req.body.password,
+               'url':req.body.url};
+  connection.query('insert into users set ?', user, function(err, rows) {
+       console.log(rows);
+       res.json(rows);
+      });
+};
