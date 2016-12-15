@@ -11,7 +11,7 @@ module.exports = (function() {
       console.log('ip address');
       console.log(ip);
       var ipType = net.isIP(ip);
-      var geo = geoip(ip);
+      var geo = geoip.lookup(ip);
       console.log(geo);
       res.end('Hello, your ip address is ' + ip + ' and is of type IPv' + ipType + '\n');
     });
