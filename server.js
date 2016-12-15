@@ -9,6 +9,7 @@ var app = express();
 var webpack = require('webpack');
 var webpackConfig = require('./webpack.config.js');
 var compiler = webpack(webpackConfig);
+var requestIp = require('request-ip');
 
 // Routers
 // var index = require('./routers/index');
@@ -26,6 +27,7 @@ app.use(express.static(path.join(__dirname, 'dist')));
 app.use(bodyParser.urlencoded({extended: true}));
 app.use(bodyParser.json());
 app.use(methodOverride());
+app.use(requestIp.mw({ attributeName : 'clientIP' }));
 app.use(morgan('dev'));
 
 app.use('/apis', apis);
