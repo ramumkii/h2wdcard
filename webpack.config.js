@@ -29,11 +29,16 @@ module.exports = {
       },
       {
         test: /\.scss$/,
-        loaders: ["style-loader", "css-loader", "sass-loader"]
+        loaders: ['style-loader', 'css-loader', 'sass-loader']
+      },
+      {
+        test: /\.json$/,
+        loader: 'json'
       }
     ]
   },
   resolve: {
-    root: path.resolve('./src')
+    root: path.resolve('./src'),
+    extensions: ['', '.js', '.json']
   }
 };

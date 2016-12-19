@@ -15,7 +15,13 @@ class Main extends Component {
   }
 
   onClick = () => {
-    this.props.addTodo();
+    //this.props.addTodo();
+    this.props.changeLocale('ko');
+  }
+
+  onClick2 = () => {
+    //this.props.addTodo();
+    this.props.changeLocale('en');
   }
 
   render() {
@@ -23,6 +29,7 @@ class Main extends Component {
       <div>
         Main
         <button onClick={this.onClick}>action test</button>
+        <button onClick={this.onClick2}>action test</button>
       </div>
     );
   }

@@ -1,0 +1,7 @@
+{
+  "app.nav.greeting": "인사말",
+  "app.nav.location": "장소",
+  "app.nav.gallery": "갤러리",
+  "app.nav.guest": "방명록",
+  "app.home.greeting": "Hello, {name}!"
+}

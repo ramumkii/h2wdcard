@@ -1,0 +1,7 @@
+{
+  "app.nav.greeting": "Greeting",
+  "app.nav.location": "Location",
+  "app.nav.gallery": "Gallery",
+  "app.nav.guest": "Guestbook",
+  "app.home.greeting": "Hello, {name}!"
+}
